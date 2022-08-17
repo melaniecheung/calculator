@@ -1,0 +1,103 @@
+html {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-gap: 10px;
+    padding: 5px;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.display-grid {
+    font-size: 50px;
+    grid-column:  1 / -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    background-color: white;
+}
+
+.display-grid .previousNum {
+    font-size: 20px;
+}
+
+.clear {
+    background-color: #EAEAFF;
+    grid-column: 1 / 3;
+    height: 65px;
+    width: 170px;
+}
+
+.delete {
+    background-color: #EAEAFF;
+}
+
+#\/ {
+    grid-area: 1 / 4 / 1 / 4;
+}
+
+#\* {
+    grid-area: 2 / 4 / 2 / 4;
+}
+
+#\- {
+    grid-area: 3 / 4 / 3 / 4;
+}
+
+#\+ {
+    grid-area: 4 / 4 / 4 / 4;
+}
+
+.operation {
+    background-color: #C8C7ED;
+}
+
+.equals {
+    background-color: #C8C7ED;
+    grid-area: 5 / 4 / 5 / 4;
+}
+
+.dot {
+    background-color: #D9D9D9;
+    grid-area: 5 / 3 / 5 / 3;
+}
+
+#zero {
+    grid-column: 1 / 3;
+    cursor: pointer;
+}
+
+.digits {
+    background-color: #D9D9D9;
+    height: 65px;
+}
+
+.digits, .dot, .equals, .operation, .delete, .clear {
+    border-radius: 9px;
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
+}
+
+.digits:hover, .dot:hover, .equals:hover, .operation:hover, .delete:hover, .clear:hover {
+    opacity: 0.8;
+}
+
+.operation:focus {
+    opacity: 0.8;
+}
